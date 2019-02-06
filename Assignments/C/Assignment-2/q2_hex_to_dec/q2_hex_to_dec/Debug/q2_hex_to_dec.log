@@ -1,0 +1,5 @@
+﻿  q2_assignment.c
+c:\users\sowmya reddy\source\repos\sriram0208\ncrwork\assignments\c\assignment-2\q2_hex_to_dec\q2_hex_to_dec\q2_assignment.c(59): warning C4013: 'gets' undefined; assuming extern returning int
+c:\users\sowmya reddy\source\repos\sriram0208\ncrwork\assignments\c\assignment-2\q2_hex_to_dec\q2_hex_to_dec\q2_assignment.c(65): warning C4013: 'getch' undefined; assuming extern returning int
+c:\users\sowmya reddy\source\repos\sriram0208\ncrwork\assignments\c\assignment-2\q2_hex_to_dec\q2_hex_to_dec\q2_assignment.c(57): warning C4101: 'num': unreferenced local variable
+  q2_hex_to_dec.vcxproj -> C:\Users\sowmya reddy\source\repos\sriram0208\ncrwork\Assignments\C\Assignment-2\q2_hex_to_dec\Debug\q2_hex_to_dec.exe

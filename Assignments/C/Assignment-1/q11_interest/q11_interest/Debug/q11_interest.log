@@ -1,0 +1,4 @@
+﻿  q11_assignment.c
+c:\users\sowmya reddy\source\repos\sriram0208\ncrwork\assignments\c\assignment-1\q11_interest\q11_interest\q11_assignment.c(8): warning C4013: 'getch' undefined; assuming extern returning int
+c:\users\sowmya reddy\source\repos\sriram0208\ncrwork\assignments\c\assignment-1\q11_interest\q11_interest\q11_assignment.c(5): warning C4101: 'CI': unreferenced local variable
+  q11_interest.vcxproj -> C:\Users\sowmya reddy\source\repos\sriram0208\ncrwork\Assignments\C\Assignment-1\q11_interest\Debug\q11_interest.exe

@@ -1,0 +1,4 @@
+﻿  q1_assignment2.c
+c:\users\sowmya reddy\source\repos\sriram0208\ncrwork\assignments\c\assignment-2\q1_bin_to_dec\q1_bin_to_dec\q1_assignment2.c(28): warning C4013: 'gets' undefined; assuming extern returning int
+c:\users\sowmya reddy\source\repos\sriram0208\ncrwork\assignments\c\assignment-2\q1_bin_to_dec\q1_bin_to_dec\q1_assignment2.c(34): warning C4013: 'getch' undefined; assuming extern returning int
+  q1_bin_to_dec.vcxproj -> C:\Users\sowmya reddy\source\repos\sriram0208\ncrwork\Assignments\C\Assignment-2\q1_bin_to_dec\Debug\q1_bin_to_dec.exe

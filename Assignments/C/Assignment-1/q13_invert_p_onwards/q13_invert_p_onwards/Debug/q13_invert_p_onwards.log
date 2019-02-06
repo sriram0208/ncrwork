@@ -1,0 +1,4 @@
+﻿  q13_assignment.c
+c:\ncrwork_cassignment\q13_assignment.c(14): warning C4013: 'getch' undefined; assuming extern returning int
+c:\ncrwork_cassignment\q13_assignment.c(7): warning C4716: 'invertponwards': must return a value
+  q13_invert_p_onwards.vcxproj -> C:\Users\sowmya reddy\source\repos\sriram0208\ncrwork\Assignments\C\Assignment-1\q13_invert_p_onwards\Debug\q13_invert_p_onwards.exe
