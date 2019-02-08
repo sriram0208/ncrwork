@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "q5_convert", "q5_convert\q5_convert.vcxproj", "{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Debug|x64.ActiveCfg = Debug|x64
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Debug|x64.Build.0 = Debug|x64
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Debug|x86.ActiveCfg = Debug|Win32
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Debug|x86.Build.0 = Debug|Win32
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Release|x64.ActiveCfg = Release|x64
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Release|x64.Build.0 = Release|x64
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Release|x86.ActiveCfg = Release|Win32
+		{D95018F3-EDB7-453E-830A-D4DAB8F1B1FB}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C76A7EE-16E4-4B19-BEA0-BE00B14EAF9A}
+	EndGlobalSection
+EndGlobal
