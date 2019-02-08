@@ -10,4 +10,5 @@ void main() {
 	scanf_s("%d", &n);
 	printf("%ld", fact(n));
 	getch();
+
 }
