@@ -4,6 +4,7 @@
 void reverse(char *p) {
 	char ch;
 	//if (strlen(p) == 1)
+	printf("%s\n", p);
 	if(*p=='\0')
 		return;
 	reverse(p + 1);
