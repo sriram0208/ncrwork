@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<string.h>
+#define SIZE 20
 void main() {
-	char str[20];
+	char str[SIZE];
 	int len,cnt=0,i,j;
 	printf("Enter any string :");
 	gets(str);

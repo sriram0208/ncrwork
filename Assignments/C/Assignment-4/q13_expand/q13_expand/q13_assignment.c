@@ -1,4 +1,5 @@
 #include<stdio.h>
+#define SIZE
 void expand(char *s1, char *s2) {
 	int i, j;
 	char k;
@@ -18,7 +19,7 @@ void expand(char *s1, char *s2) {
 	s2[j] = '\0';
 }
 void main() {
-	char *s1, s2[100];
+	char *s1, s2[SIZE];
 	s1 = "0123a-e1-4";
 	expand(s1, s2);
 	printf("%s expansion is : %s\n",s1,s2);

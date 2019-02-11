@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#define SIZE 50
 int str_length(char *p) {
 	int count = 0;
 	for (;*p != '\0';p++)
@@ -38,7 +39,7 @@ int str_compare(char *s1, char *s2) {
 	return *s1 - *s2;
 }
 void main() {
-	char s1[50], s2[50], choice;
+	char s1[SIZE], s2[SIZE], choice;
 	int res;
 	printf("Choose the option \n1)string reverse\n2)string copy\n3)string concatenate\n4)string compare\n");
 	choice = getchar();

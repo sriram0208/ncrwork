@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#define SIZE 20
 void delete(char *s, char ch) {
 
 	char  *p;
@@ -21,7 +22,7 @@ void delete(char *s, char ch) {
 	free(p);
 }
 void main() {
-	char s[20],ch;
+	char s[SIZE],ch;
 	int i, j, cnt = 0;
 	printf("Enter any string :");
 	gets(s);
