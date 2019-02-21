@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\..\ncrwork_Cassignment\q13_assignment.c">
+    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\..\CDAC_Training\C\Assignment1_SourceFiles\q13_assignment.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\..\..\..\..\CDAC_Training\C\Assignment1_SourceFiles\q12_assignment.c">
+    <ClCompile Include="MergeLists.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
