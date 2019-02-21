@@ -1,4 +1,4 @@
 ﻿  q13_assignment.c
 c:\cdac_training\c\assignment1_sourcefiles\q13_assignment.c(14): warning C4013: 'getch' undefined; assuming extern returning int
-c:\cdac_training\c\assignment1_sourcefiles\q13_assignment.c(7): warning C4716: 'invertponwards': must return a value
-  q13_invert_p_onwards.vcxproj -> C:\Users\sowmya reddy\source\repos\sriram0208\ncrwork\Assignments\C\Assignment-1\q13_invert_p_onwards\Debug\q13_invert_p_onwards.exe
+  LINK : C:\CDAC_Training\ncrwork\Assignments\C\Assignment-1\q13_invert_p_onwards\Debug\q13_invert_p_onwards.exe not found or not built by the last incremental link; performing full link
+  q13_invert_p_onwards.vcxproj -> C:\CDAC_Training\ncrwork\Assignments\C\Assignment-1\q13_invert_p_onwards\Debug\q13_invert_p_onwards.exe

@@ -26,7 +26,7 @@ void Stack::push(int ele) {
 	struct node *temp;
 	temp = new node;
 	temp->data = ele;
-	if (top == NULL){
+	if (top == NULL) {
 		top = temp;
 		temp->next = NULL;
 	}
@@ -35,9 +35,9 @@ void Stack::push(int ele) {
 		top = temp;
 	}
 }
-void Stack::pop(){
+void Stack::pop() {
 	if (top == NULL)
-		cout<<"Stack underflow"<<endl;
+		cout << "Stack underflow" << endl;
 	else {
 		struct node *temp;
 		temp = top;
@@ -73,5 +73,7 @@ int main() {
 	S.~Stack();
 	S.printStack();
 	getchar();
+	getchar();
+
 	return 0;
 }

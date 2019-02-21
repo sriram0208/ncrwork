@@ -5,7 +5,7 @@ struct node {
 	int power;
 	struct node *next;
 };
-class Poly{
+class Poly {
 	struct node *list;
 public:
 	Poly() {
@@ -60,7 +60,7 @@ Poly addPoly(Poly P1, Poly P2) {
 			C2 = C2->next;
 		}
 		else {
-			P.insert(C1->coeff+C2->coeff, C1->power);
+			P.insert(C1->coeff + C2->coeff, C1->power);
 			C1 = C1->next;
 			C2 = C2->next;
 		}

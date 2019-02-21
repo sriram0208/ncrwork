@@ -39,7 +39,7 @@ void Queue::insert(int ele) {
 		rear = temp;
 	}
 }
-void Queue::remove(){
+void Queue::remove() {
 	if (front == NULL)
 		cout << "Queue underflow" << endl;
 	else {
@@ -62,7 +62,7 @@ void Queue::remove(){
 }
 void Queue::printQueue() {
 	if (front == NULL)
-		cout <<"Queue is empty";
+		cout << "Queue is empty";
 	else {
 		struct node *curr = front;
 		while (curr != NULL) {
