@@ -1,35 +1,55 @@
 #include<stdio.h>
-#define SIZE
-void expand(char *s1, char *s2) {
-	int i, j;
-	char k;
-	for (i = 0,j=0;s1[i] != '\0';i++) {
-		if (s1[i] == '-') {
-			for (k = s1[i - 1] + 1;k < s1[i + 1];k++)
-			{
-				s2[j] = k;
-				j++;
+#define SIZE 20
+
+int checkValidCharRange(char *str, int start, int end) {
+	if(str[start-1] )
+}
+int checkValidShorthandStr(char *str) {
+	int idx;
+	for (idx = 0;str[idx] != '\0';idx++) {
+		if (isUpper(str[idx]) || isLower(str[idx]) || isDigit(str[idx]) || str[idx] == '-')
+			continue;
+		break;
+	}
+	if (idx != strlen(str))
+		return 0;
+	if (str[0] == '-' || str[1] == '-')
+		return 0;
+	start = 0;
+	end = 0;
+	for (idx = 1;;idx++) {
+		if (str[idx] != '-')
+			continue;
+		start = idx++;
+		while (str[idx] == '-')
+			idx++;
+		end = idx - 1;
+		if(checkValidCharRange(str,start,end)
+
+	}
+	return 1;
+}
+int expand(char *inputStr, char *outputStr) {
+	int idx;
+	if (checkValidShorthandStr(inputStr)) {
+		for (idx = 0;;idx++) {
+			if (inputStr[idx + 1] == '-') {
+
 			}
 		}
-		else {
-			s2[j] = s1[i];
-			j++;
-		}
 	}
-	s2[j] = '\0';
+	else
+		return 0;
 }
 void main() {
-	char *s1, s2[SIZE];
-	s1 = "0123a-e1-4";
-	expand(s1, s2);
-	printf("%s expansion is : %s\n",s1,s2);
-
-	s1 = "0-9";
-	expand(s1, s2);
-	printf("%s expansion is : %s\n", s1, s2);
-
-	s1 = "a-z";
-	expand(s1, s2);
-	printf("%s expansion is : %s\n", s1, s2);
+	char shortStr[SIZE],*expandStr,choice;
+	printf("Choose option from menu\n");
+	printf("1)Expand a string\n0)Exit");
+	scanf("%c", &choice);
+	while (choice == '1') {
+		printf("Enter shorthand notation of the string :");
+		scanf("%s", shortStr);
+		expand(shortStr,expandStr);
+	} 
 	getch();
 }

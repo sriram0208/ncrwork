@@ -160,7 +160,7 @@ void SingleLL::deleteSpec(int ele) {
 void SingleLL::travelForward() {
 	struct node *curr = start;
 	while (curr != NULL) {
-		cout << curr->data << "\t";
+		cout << curr->data << " ";
 		curr = curr->next;
 	}
 	cout << "\n";
@@ -169,7 +169,7 @@ void print(struct node *curr) {
 	if (curr != NULL)
 	{
 		print(curr->next);
-		cout << curr->data << "\t";
+		cout << curr->data << " ";
 	}
 }
 void SingleLL::travelBackward() {
@@ -197,26 +197,58 @@ void SingleLL::reverse() {
 }
 
 int main() {
-	SingleLL l1;
-	l1.insertFirst(1);
-	l1.insertLast(2);
-	l1.insertLast(3);
-	l1.insertAfter(2, 7);
-	l1.insertLast(4);
-	l1.insertLast(5);
-	l1.insertBefore(5, 8);
-	l1.travelForward();
-
-	l1.deleteSpec(2);
-	l1.deleteFirst();
-	l1.deleteLast();
-	l1.travelForward();
-	l1.travelBackward();
-	l1.reverse();
-	l1.travelForward();
-	l1.~SingleLL();
-	l1.deleteFirst();
-
+	SingleLL Sll;
+	char choice;
+	int val,pos;
+	cout << "Enter choice  :\n\n";
+	cout <<"1)insertFirst\t\t2)insertLast\n3)insertAfter\t\t4)insertBefore\n5)deleteFirst\t\t6)deleteLast\n7)deleteSpec\t\t8)travelForward\n9)travelBackward\t10)reverse : ";
+	cin >> choice;
+	while (choice >= '1' && choice <= '10') {
+		switch (choice) {
+		case '1':cout << "Enter value to be inserted :";
+			cin >> val;
+			Sll.insertFirst(val);
+			break;
+		case '2':cout << "Enter value to be inserted :";
+			cin >> val;
+			Sll.insertLast(val);
+			break;
+		case '3':cout << "Enter position , value to be inserted :";
+			cin >> pos >> val;
+			Sll.insertAfter(pos, val);
+			break;
+		case '4':cout << "Enter position , value to be inserted :";
+			cin >> pos >> val;
+			Sll.insertBefore(pos, val);
+			break;
+		case '5':cout << "Enter value to be deleted :";
+			cin >> val;
+			Sll.deleteFirst();
+			break;
+		case '6':cout << "Enter value to be deleted :";
+			cin >> val;
+			Sll.deleteLast();
+			break;
+		case '7':cout << "Enter value to be deleted :";
+			cin >> val;
+			Sll.deleteSpec(val);
+			break;
+		case '8':
+			cout << "Forward list : ";
+			Sll.travelForward();
+			break;
+		case '9':
+			cout << "Backward list : ";
+			Sll.travelBackward();
+		case '10':
+			cout << "Reverse list : ";
+			Sll.reverse();
+			break;
+		}
+		cout << "Enter choice  :\n\n";
+		cout << "1)insertFirst\t\t2)insertLast\n3)insertAfter\t\t4)insertBefore\n5)deleteFirst\t\t6)deleteLast\n7)deleteSpec\t\t8)travelForward\n9)travelBackward\t10)reverse : ";
+		cin >> choice;
+	}
 	getchar();
 	return 0;
 }

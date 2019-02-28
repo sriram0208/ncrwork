@@ -118,22 +118,47 @@ List mergeLL(List l1, List l2) {
 }
 int main() {
 	List l1, l2, l3;
-	int arr1[] = { 6,2,7,4,6,15,9,23,33,21 };
-	int arr2[] = { 3,45,67,11,7,9,1,23,43,56 };
-	for (int i = 0;i < 10;i++) {
-		l1.insertElement(arr1[i]);
-		l2.insertElement(arr2[i]);
+	char choice;
+	int val;
+
+	cout << "Enter choice :\n\n";
+	cout << "1)InsertToList1\t\t2)InsertToList2\n3)DeleteFromList1\t4)DeleteFromList2\n5)SortList1\t\t6)SortList2\n7)DisplayList1\t\t8)DisplayList2\n9)mergeLists : ";
+	cin >> choice;
+	while (choice >= '1'&&choice <= '9') {
+		switch (choice) {
+		case '1':cout << "Enter value to be inserted to list1 :";
+			cin >> val;
+			l1.insertElement(val);
+			break;
+		case '2':cout << "Enter value to be inserted to list2:";
+			cin >> val;
+			l2.insertElement(val);
+			break;
+		case '3':cout << "Enter value to be deleted from list1:";
+			cin >> val;
+			l1.deleteElement(val);
+			break;
+		case '4':cout << "Enter value to be deleted from list2:";
+			cin >> val;
+			l2.deleteElement(val);
+			break;
+		case '5':l1.sort();
+			break;
+		case '6':l2.sort();
+			break;
+		case '7':l1.display();
+			break;
+		case '8':l2.display();
+			break;
+		case '9':l3 = mergeLL(l1, l2);
+			cout << "Merged Lists : ";
+			l3.display();
+			break;
+		}
+		cout << "Enter choice :\n\n";
+		cout << "1)InsertToList1\t\t2)InsertToList2\n3)DeleteFromList1\t\t4)DeleteFromList2\n5)SortList1\t\t6)SortList2\n7)DisplayList1\t\t8)DisplayList2\n9)mergeLists : ";
+		cin >> choice;
 	}
-	l1.display();
-	l2.display();
-	l1.sort();
-	l2.sort();
-	cout << "sorted lists\n";
-	l1.display();
-	l2.display();
-	l3 = mergeLL(l1, l2);
-	cout << "merged list\n";
-	l3.display();
 	getchar();
 	return 0;
 }
