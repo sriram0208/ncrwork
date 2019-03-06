@@ -1,5 +1,0 @@
-﻿  q12_assignment.c
-c:\cdac_training\c\assignment1_sourcefiles\q12_assignment.c(14): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
-c:\cdac_training\c\assignment1_sourcefiles\q12_assignment.c(15): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
-c:\cdac_training\c\assignment1_sourcefiles\q12_assignment.c(26): warning C4013: 'getch' undefined; assuming extern returning int
-  q12_rotate_right.vcxproj -> C:\Users\sowmya reddy\source\repos\sriram0208\ncrwork\Assignments\C\Assignment-1\q12_rotate_right\Debug\q12_rotate_right.exe
