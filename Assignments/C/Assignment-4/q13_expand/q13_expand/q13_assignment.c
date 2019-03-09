@@ -24,14 +24,6 @@ int checkValidCharRange(char *str, int start, int end) {
 int checkValidShorthandStr(char *str) {
 	int idx,start,end;
 
-	//valid digits are alphabet , digit, -
-	for (idx = 0;str[idx] != '\0';idx++) {
-		if (isupper(str[idx]) || islower(str[idx]) || isdigit(str[idx]) || str[idx] == '-')
-			continue;
-		break;
-	}
-	if (idx != strlen(str))
-		return 0;
 	if (str[0] == '-' || str[strlen(str)-1] == '-')
 		return 0;
 
