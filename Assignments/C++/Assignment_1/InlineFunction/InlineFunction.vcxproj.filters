@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Assignment-1\q4_assignment1\q4_assignment1\inline.cpp">
+    <ClCompile Include="inline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
