@@ -2,9 +2,14 @@
 #include<iostream>
 #include<string>
 #include<algorithm>
+#include<regex>
 
 using namespace std;
 
+int add(int, int);
+int sub(int, int);
+int mul(int, int);
+int divn(int, int);
 
 void str_rev(string &str) {
 	char temp;
@@ -31,18 +36,24 @@ string performOperation(string lhs, string rhs,char operation) {
 		rNum = -rNum;
 
 	switch (operation) {
-	case '/':	res = lNum / rNum;
+	case '/':	
+				res = divn(lNum, rNum);
 				break;
-	case '*':	res = lNum * rNum;
+	case '*':	
+				res = mul(lNum, rNum);
 				break;
-	case '+':	res = lNum + rNum;
+	case '+':	
+				res = add(lNum, rNum);
 				break;
-	case '-':	res = lNum - rNum;
+	case '-':	
+				res = sub(lNum, rNum);
 				break;
 	}
 
 	if (res < 0)
 		tempRes = -res;
+	else
+		tempRes = res;
 
 	string resStr;
 
@@ -56,13 +67,19 @@ string performOperation(string lhs, string rhs,char operation) {
 
 	return resStr;
 }
+
+//This function takes the expression within paranthesis,
+//evaluates it and returns the resultant string
+
 string  evaluateExpWithoutParan(string exp) {
 
 	char operation[4] = { '/','*','+','-' };
 
+	//Evaluates all div's first, then mul's, then sums, then sub's--BODMAS--.
 	for (int oper_idx = 0;oper_idx < 4;oper_idx++) {
 		int i = 0, j, k, cnt = 0;
 
+		//counts no. of operators
 		for (int idx = 0;idx < exp.length();idx++) {
 			if (exp[idx] == operation[oper_idx])
 				cnt++;
@@ -78,7 +95,8 @@ string  evaluateExpWithoutParan(string exp) {
 					k++;
 				int start = j + 1;
 				int end = k - 1;
-				exp.replace(start, end - start + 1, performOperation(exp.substr(start, i - (start)), exp.substr(i + 1, end - i), operation[oper_idx]));
+				string res = performOperation(exp.substr(start, i - (start)), exp.substr(i + 1, end - i), operation[oper_idx]);
+				exp.replace(start, end - start + 1,res );
 				i = start;
 				cnt--;
 			}
@@ -88,48 +106,85 @@ string  evaluateExpWithoutParan(string exp) {
 	return exp;
 }
 
-//bool checkValidExpression(string str) {
-//
-//}
+bool checkValidExpression(string str) {
 
+	//Checking for division by zero
+	int found = str.find("/0");
+	if (found != string::npos){
+		cout << "Division by zero ocuured\n";
+		return false;
+	}
+	else
+		return true;
+}
+
+
+//Returns the index of closing paranthesis
 int searchForClosingParanthesis(string str, int startIdx) {
 	while (str[startIdx] != ')') {
 		startIdx++;
 	}
 	return startIdx;
 }
+
+//This function takes reference of the given string as input
+//The string may have paranthesis , this function calls evaluateExpWithoutParan()
+//to remove paranthesis
 void evaluateExpWithParan(string &parStr) {
 	int cnt = 0,idx,start,end;
+
+	//counts no. of paranthesis
 	for (idx = 0;idx < parStr.length();idx++) {
 		if (parStr[idx] == '(')
 			cnt++;
 	}
-	idx = parStr.length()-1;
-	while (idx >= 0 && cnt != 0) {
-		if (parStr[idx] == '(') {
-			start = idx+1;
-			end = searchForClosingParanthesis(parStr, start)-1;
-			string temp=evaluateExpWithoutParan(parStr.substr(start, end - start + 1));
-			parStr.replace(start-1, (end+1) - (start-1) + 1,temp);
-			idx=start;
-			cnt--;
+
+	if (cnt == 0) {
+		start = 0;
+		end= parStr.length() - 1;
+		string temp = evaluateExpWithoutParan(parStr.substr(start, end - start + 1));
+		
+		parStr.replace(start, parStr.length(), temp);
+	}
+
+	else {
+		//search for opening paranthesis from right ,and pass the expression within paranthesis
+		//to evaluateExpWithoutParan() function
+		idx = parStr.length() - 1;
+		while (idx >= 0 && cnt != 0) {
+			if (parStr[idx] == '(') {
+				start = idx + 1;
+				end = searchForClosingParanthesis(parStr, start) - 1;
+				string temp = evaluateExpWithoutParan(parStr.substr(start, end - start + 1));
+				parStr.replace(start - 1, (end + 1) - (start - 1) + 1, temp);
+				idx = start;
+				cnt--;
+			}
+			idx--;
 		}
-		idx--;
+		start = 0;
+		end = parStr.length() - 1;
+		string temp = evaluateExpWithoutParan(parStr.substr(start, end - start + 1));
+		parStr.replace(start, parStr.length(), temp);
 	}
 }
 int main() {
-	/*((23+(2-78))+-----1*234/23)+(12-8)
-	45+65-78/77*-78-+78;
-	---3*/
-
-	string str;//="  5+4*68/4/3*(2-1)";
-	cin >> str;
-	str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
-	evaluateExpWithParan(str);
-	cout << str << endl;
 	
-
-
+	string str;
+	char proceed;
+	do {
+		cout << "Enter the expression to be evaluated\n";
+		cin >> str;
+		str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
+		if (false == checkValidExpression(str))
+			cout << "Invalid expression\n";
+		else {
+			evaluateExpWithParan(str);
+			cout << str << endl;
+		}
+		cout << "Do you want to continue?(Y/N) : ";
+		cin >> proceed;
+	} while (proceed == 'Y' || proceed=='y');
 	getchar();
 	getchar();
 

@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CalculatorMain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="arithmetic.cpp">
+    <ClCompile Include="StringImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
