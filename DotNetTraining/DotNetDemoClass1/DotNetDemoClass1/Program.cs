@@ -33,6 +33,14 @@ namespace DotNetDemoClass1
             List<int> li = new List<int>();
             li.Add(9);
             li.Add(8);
+
+            //21-03
+
+            float f=5;
+            int b = 10;
+            f = b;
+            b =(int) f;
+            Console.WriteLine(f);
             Console.Read();
         }
 
