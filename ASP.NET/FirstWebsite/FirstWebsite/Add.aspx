@@ -12,11 +12,11 @@
             <table>
                 <tr>
                     <td><asp:Label id="lblNum1" runat="server" Text="Number1"></asp:Label></td>
-                    <td><asp:TextBox ID="txtNum1" runat="server"></asp:TextBox></td>
+                    <td><asp:TextBox ID="txtNum1" runat="server" BackColor="Yellow" ForeColor="#660033"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td><asp:Label ID="lblNum3" runat="server" Text="Number3"></asp:Label></td>
-                    <td><asp:TextBox ID="txtNum2" runat="server"></asp:TextBox></td>
+                    <td><asp:Label ID="lblNum2" runat="server" Text="Number2"></asp:Label></td>
+                    <td><asp:TextBox ID="txtNum2" runat="server" BackColor="Yellow"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td><asp:Button ID="btnAdd" runat="server" Text="Add" OnClick="btnAdd_Click" /></td>
